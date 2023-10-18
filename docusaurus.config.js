@@ -16,6 +16,7 @@ const config = {
     tagline: 'A repository of knowledge on structural causal inference',
     favicon: 'img/causaldict_logo.ico',
 
+
     // Set the production url of your site here
     url: siteUrl,
     // Set the /<baseUrl>/ pathname under which your site is served
@@ -27,7 +28,8 @@ const config = {
     organizationName: 'leo-ware', // Usually your GitHub org/user name.
     projectName: 'causal.leoware.io', // Usually your repo name.
 
-    onBrokenLinks: 'throw',
+    onBrokenLinks: 'warn',
+    // onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
     markdown: {

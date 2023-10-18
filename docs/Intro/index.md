@@ -1,0 +1,3 @@
+# Intro
+
+This section provides an intro to some of the key ideas in structural causal modeling. First, we cover some of the core concepts that illuminate exactly what it means to do causal inference ( [The Problem of Causal Inference](The%20Problem%20of%20Causal%20Inference.md), [Confounding](./Confounding.md)). Then, we dig into two kind of models: [Causal Graphs](Causal%20Graphs.md), which are used for modeling assumptions, and [do-expressions](Do%20Expressions.md) which are used for operationalizing causal questions.
