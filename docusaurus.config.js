@@ -3,12 +3,6 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-// const obsidian = require('remark-obsidian');
-const math = require('remark-math');
-const katex = require('rehype-katex');
-const imgLinks = require("@pondorasti/remark-img-links")
-// const gfm = require('remark-gfm');
-
 
 // Constants
 const siteTitle = 'Causal: dict';
@@ -36,6 +30,12 @@ const config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
+    markdown: {
+        mermaid: true,
+    },
+
+    themes: ['@docusaurus/theme-mermaid'],
+
     // Even if you don't use internalization, you can use this field to set useful
     // metadata like html lang. For example, if your site is Chinese, you may want
     // to replace "en" with "zh-Hans".
@@ -51,6 +51,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
+                    routeBasePath: '/',
                     remarkPlugins: [
                         require('remark-math'),
                     ],
@@ -61,13 +62,7 @@ const config = {
                     editUrl:
                         'https://github.com/leo-ware/causal.leoware.io',
                 },
-                // blog: {
-                //     showReadingTime: true,
-                //     // Please change this to your repo.
-                //     // Remove this to remove the "edit this page" links.
-                //     editUrl:
-                //         'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-                // },
+                blog: false,
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
@@ -79,6 +74,11 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             image: 'img/causaldict_logo.svg', // social card
+            // docs: {
+            //     sidebar: {
+            //         hideable: true,
+            //     }
+            // },
             navbar: {
                 title: siteTitle,
                 logo: {
