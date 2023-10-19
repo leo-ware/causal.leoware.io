@@ -61,8 +61,7 @@ const config = {
                         [require('rehype-katex'), {output: "mathml"}]
                     ],
                     sidebarPath: require.resolve('./sidebars.js'),
-                    editUrl:
-                        'https://github.com/leo-ware/causal.leoware.io',
+                    editUrl: githubUrl,
                 },
                 blog: false,
                 theme: {
@@ -88,16 +87,16 @@ const config = {
                     src: 'img/causaldict_logo.svg',
                 },
                 items: [
-                    // {label: "About", to: "/", position: "left"},
+                    {label: "About", to: "/about", position: "left"},
                     {
                         type: 'docSidebar',
                         sidebarId: 'tutorialSidebar',
                         position: 'left',
-                        label: 'Browse',
+                        label: 'Course',
                     },
                     // {to: '/', label: "Tools", position: 'left'},
                     {
-                        href: 'https://github.com/leo-ware/causal.leoware.io',
+                        href: githubUrl,
                         label: 'GitHub',
                         position: 'right',
                     },
@@ -107,41 +106,41 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'Docs',
+                        title: 'Navigation',
                         items: [
                             {
-                                label: 'Tutorial',
+                                label: 'Home',
+                                to: '/',
+                            },
+                            {
+                                label: 'Course',
                                 to: '/docs/intro',
                             },
                         ],
                     },
                     {
-                        title: 'Community',
+                        title: "Contribute",
                         items: [
                             {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                                label: "GitHub",
+                                href: githubUrl,
                             },
                             {
-                                label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
-                            },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
-                        ],
+                                label: "Issues",
+                                href: githubUrl + "/issues",
+                            }
+                        ]
                     },
                     {
-                        title: 'More',
+                        title: 'Info',
                         items: [
                             {
-                                label: 'Blog',
-                                to: '/blog',
+                                label: 'About',
+                                to: '/about',
                             },
                             {
-                                label: 'GitHub',
-                                href: 'https://github.com/leo-ware/causal.leoware.io',
+                                label: 'My Work',
+                                href: 'https://leoware.io',
                             },
                         ],
                     },

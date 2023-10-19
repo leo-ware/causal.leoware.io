@@ -3,39 +3,40 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description={siteConfig.tagline}>
-      <HomepageHeader />
-      <main>
-        {/* <HomepageFeatures /> */}
-      </main>
-    </Layout>
-  );
+    const { siteConfig } = useDocusaurusContext();
+    return (
+        <Layout
+            title={`${siteConfig.title}`}
+            description={siteConfig.tagline}>
+            <header className={clsx('hero', styles.heroBanner)}>
+                <div className="container" style={{
+                    paddingTop: '10vh',
+                }}>
+                    <h1 className="hero__title">{siteConfig.title}</h1>
+                    <p className="hero__subtitle">
+                        {/* {siteConfig.tagline} */}
+                        A crash course in structural causal inference.
+                    </p>
+                </div>
+            </header>
+            <main>
+                <div className={styles.buttons}>
+                    <Link
+                        className={clsx("button button--secondary button--lg", styles.button)}
+                        to={"/intro"}>
+                            To Course
+                    </Link>
+                    <Link
+                        className={clsx("button button--secondary button--lg", styles.button)}
+                        to="/about">
+                            About
+                    </Link>
+                </div>
+            </main>
+        </Layout>
+    );
 }
